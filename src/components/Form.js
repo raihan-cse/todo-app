@@ -1,7 +1,7 @@
 import React from 'react'
 import PlusIcon from '../assets/icons/plus.svg'
 
-function Form({ inputText, setInputText, todos, setTodos }) {
+function Form({ inputText, setInputText, todos, setTodos, setStaus }) {
     const inputTextHandler = (e) => {
         setInputText(e.target.value)
     }
@@ -18,6 +18,7 @@ function Form({ inputText, setInputText, todos, setTodos }) {
         ]);
         setInputText('');
     }
+
 
     return (
         <div className='form_wrapper'>
@@ -38,7 +39,7 @@ function Form({ inputText, setInputText, todos, setTodos }) {
                     <div className="label_box">
                         <span>filter</span>
                     </div>
-                    <select className='select'>
+                    <select name="todos"  className='select'>
                         <option value="all">All</option>
                         <option value="completed">Completed</option>
                         <option value="uncompleted">Uncompleted</option>
