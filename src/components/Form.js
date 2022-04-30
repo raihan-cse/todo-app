@@ -1,13 +1,22 @@
 import React from 'react'
 import PlusIcon from '../assets/icons/plus.svg'
 
-function Form({ inputText, setInputText }) {
+function Form({ inputText, setInputText, todos, setTodos }) {
     const inputTextHandler = (e) => {
         setInputText(e.target.value)
     }
 
     const submitItemHandler = (e) => {
         e.preventDefault();
+        setTodos([
+            ...todos,
+            {
+                id: Math.random() * 100,
+                text: inputText,
+                completed: false
+            }
+        ]);
+        setInputText('');
     }
 
     return (
