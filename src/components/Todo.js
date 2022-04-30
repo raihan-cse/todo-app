@@ -21,9 +21,9 @@ function Todo({ todos, setTodos, todo }) {
     }
 
     return (
-        <div className="todo_item">
+        <div className={`todo_item ${todo.completed ? 'completed' : ''}`}>
             <p>{todo.text}</p>
-            <button type='button' className={`btn_complete ${todo.completed ? 'completed' : ''}`} onClick={completedHandler}>
+            <button type='button' className="btn_complete" onClick={completedHandler}>
                 {todo.completed ? <img src={CompleteIcon} alt="icon" /> : '' }
             </button>
             <button type='button' className='btn_remove' onClick={deleteItemHandler}>

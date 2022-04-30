@@ -4,13 +4,20 @@ import Form from './components/Form';
 import TodoList from './components/TodoList';
 
 function App() {
+  //get items in local storage
+  const todoStoreItems = JSON.parse(localStorage.getItem("todos") || "[]");
+
   const [inputText, setInputText] = useState('');
-  const [todos, setTodos] = useState([]);
+  const [todos, setTodos] = useState(todoStoreItems);
+
+  //status wise filter
   const [status, setStaus] = useState('all');
-  const [filteredTodos, setFilteredTodos] = useState([]);
+  const [filteredTodos, setFilteredTodos] = useState(todoStoreItems);
 
   useEffect(() => {
     filterHnadler();
+    //set items in local storage
+    localStorage.setItem("todos", JSON.stringify(todos));
   }, [todos, status]);
 
   const filterHnadler = () => {

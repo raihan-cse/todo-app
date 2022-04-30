@@ -31,12 +31,12 @@ function Form({ inputText, setInputText, todos, setTodos, setStaus }) {
                 <div className="input_group">
                     <input
                         type="text"
-                        placeholder='Write list here...'
+                        placeholder='Enter Task Here...'
                         className='input_box'
                         value={inputText}
                         onChange={inputTextHandler}
                     />
-                    <button type='submit' className='btn_submit' onClick={submitItemHandler}>
+                    <button type='submit' className='btn_submit' onClick={submitItemHandler} disabled={!inputText}>
                         <img src={PlusIcon} alt="icon" />
                     </button>
                 </div>
