@@ -1,1 +1,138 @@
+.todo_app {
+  max-width    : 41.2rem;
+  width        : 100%;
+  margin       : 0 auto;
+  min-height   : 20vh;
+  border-radius: 1.2rem;
+  background   : var(--white);
+  overflow     : hidden;
+}
 
+header {
+  padding   : .8rem 1.6rem;
+  background: var(--gray3);
+}
+
+.title {
+  font-weight   : 700;
+  font-size     : 3.2rem;
+  line-height   : 3.2rem;
+  text-align    : center;
+  color         : var(--blue);
+  text-transform: uppercase;
+}
+
+
+
+.form_wrapper {
+  padding      : .8rem 1.6rem;
+  border-bottom: 1px solid var(--gray3);
+}
+
+.input_group,
+.select_box {
+  display      : flex;
+  flex-wrap    : nowrap;
+  align-items  : center;
+  border-radius: .5rem;
+  padding      : .8rem;
+  background   : var(--gray2);
+}
+
+.input_box {
+  flex                     : 0 0 80%;
+  font-size                : 1.8rem;
+  line-height              : 2.8rem;
+  color                    : var(--black);
+  padding                  : .5rem .8rem;
+  border                   : 0;
+  border-top-left-radius   : .4rem;
+  border-bottom-left-radius: .4rem;
+  background               : var(--white);
+}
+
+.btn_submit {
+  flex                      : 0 0 20%;
+  padding                   : .9rem .8rem;
+  border-top-right-radius   : .4rem;
+  border-bottom-right-radius: .4rem;
+  background                : var(--gray3);
+  transition                : background .3s ease-in-out;
+}
+.btn_submit img {
+  width: 2rem;
+  height: 2rem;
+}
+
+.select_box {
+  margin-top: .8rem;
+}
+
+.select_box>* {
+  flex: 0 0 50%;
+}
+
+.label_box span {
+  font-weight   : 500;
+  font-size     : 1.8rem;
+  line-height   : 2.8rem;
+  color         : var(--blue);
+  text-transform: uppercase;
+}
+
+.select {
+  font-size          : 1.8rem;
+  line-height        : 2.8rem;
+  color              : var(--blue);
+  -webkit-appearance : none;
+  -moz-appearance    : none;
+  -ms-appearance     : none;
+  appearance         : none;
+  outline            : 0;
+  box-shadow         : none;
+  padding            : .5rem .8rem;
+  border             : 0;
+  border-radius      : .4rem;
+  background-image   : url('./assets/icons/chaveron-down.svg');
+  background-repeat  : no-repeat;
+  background-position: center right .8rem;
+  background-size    : 1.6rem 1.8rem;
+  position           : relative;
+  overflow           : hidden;
+}
+
+
+
+.todo_wrapper {
+  padding: .8rem 1.6rem;
+}
+.todo_wrapper .todo_item:not(:last-child) {
+  margin-bottom: .8rem;
+}
+.todo_item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .8rem;
+  border-radius: .5rem;
+  background: var(--gray2);
+}
+.todo_item p {
+  flex: 1;
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+}
+.todo_item button img {
+  width: 2rem;
+  height: 2rem;
+}
+.btn_status, .btn_remove {
+  width: 3.5rem;
+  height: 3.5rem;
+  /* border: 1px solid var(--blue); */
+  border-radius: 50%;
+  background: var(--gray3);
+}
+.btn_status {
+  margin-right: .8rem;
+}
