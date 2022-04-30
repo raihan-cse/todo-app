@@ -2,12 +2,12 @@ import React from 'react'
 
 import Todo from './Todo'
 
-function TodoList({ todos, setTodos }) {
+function TodoList({ todos, setTodos, filteredTodos }) {
     
     return (
         <div className='todo_wrapper'>
             {
-                todos.map((todo, index) => (
+                filteredTodos.map((todo, index) => (
                     <Todo
                     key={index}
                     todos={todos}

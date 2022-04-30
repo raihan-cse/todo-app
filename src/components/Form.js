@@ -19,6 +19,11 @@ function Form({ inputText, setInputText, todos, setTodos, setStaus }) {
         setInputText('');
     }
 
+    //status wise filter
+    const statusHandler = (e) => {
+        setStaus(e.target.value)
+    }
+
 
     return (
         <div className='form_wrapper'>
@@ -39,7 +44,7 @@ function Form({ inputText, setInputText, todos, setTodos, setStaus }) {
                     <div className="label_box">
                         <span>filter</span>
                     </div>
-                    <select name="todos"  className='select'>
+                    <select name="todos"  className='select' onChange={statusHandler}>
                         <option value="all">All</option>
                         <option value="completed">Completed</option>
                         <option value="uncompleted">Uncompleted</option>
